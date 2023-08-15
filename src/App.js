@@ -6,13 +6,18 @@ import Products from './pages/Products';
 import Contacts from './pages/Contacts';
 import About from './pages/About';
 import Cart from './pages/Cart';
+import { Provider } from './context/Context';
 
 function App() {
+
   return (
     <Router>
+    <Provider>
     <div>
       <Header />
+      {/* The site background image */}
       <div className='bg'>
+        {/* All available routes */}
         <Routes>
           <Route path='/' element={<Home/>}></Route>
           <Route path='/products' element={<Products/>}></Route>
@@ -22,6 +27,7 @@ function App() {
         </Routes>
         </div>
     </div>
+    </Provider>
     </Router>
   );
 }

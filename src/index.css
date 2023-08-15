@@ -41,6 +41,11 @@ header {
   align-items: center;
   padding-left: 1%;
   padding-right: 1%;
+  transition: outline 0.1s ease;
+}
+
+.headerButton:hover {
+  outline: 1.5px solid black;
 }
 
 .bg {
@@ -86,12 +91,40 @@ header {
   height:10%
 }
 
+.searchBar input {
+  transition: color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+.searchBar input:hover::placeholder {
+  color: black;
+}
+
+.searchBar input:hover {
+  outline: 2px solid black;
+}
+
+.flippable-image {
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.flipped {
+  transform: scaleX(-1);
+  filter: grayscale(100%) brightness(0);
+}
+
+
+
 .cart {
   width: 8vw;
   height: auto;
   background-color: grey;
   border: none;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s;
+}
+
+.cart:hover {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
 .cartLink {
@@ -155,10 +188,11 @@ header {
   font-size: larger;
 }
 
+/* Animation doesn't work as intended. P above is moved upward slightly. May be better than intended, ask Aiden for input. */
 .homeButton {
   display: flex;
   height: 15vh;
-  width: 26vh;
+  width: 26vw;
   background-color: white;
   color: black;
   font-family: 'Nunito', sans-serif;
@@ -171,6 +205,15 @@ header {
   align-items: center;
   padding-left: 2%;
   padding-right: 2%;
+  cursor: pointer;
+  transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  z-index: 1;
+}
+
+.homeButton:hover {
+  height: 19vh;
+  width: 28vw;
 }
 
 .aboutBg {
@@ -181,7 +224,8 @@ header {
 }
 
 .aboutTxt {
-  font-size: large;
+  font-size: larger;
+  line-height: 32px;
 }
 
 .productGrid {
@@ -204,6 +248,7 @@ header {
 .product img {
   width: 100%;
   height: auto;
+  border: 1.5px solid black;
 }
 
 .productGrid::after {

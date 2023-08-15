@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+  /* The Home page. returns some text and a Link to the Products page. */
   return (
     <div className='homeContainer'>
       <div className='homeP'>
