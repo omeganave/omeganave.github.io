@@ -1,10 +1,10 @@
 import React from 'react'
 
-const ContactCard = ({ image, alt="PLACEHOLDER", text="PLACEHOLDER" }) => {
-    /* Returns an image with some text underneath. */
+// The contact card for displaying on the Contacts page. Displays an image and some text underneath. Accepts the image, the image alt text, and the text underneath as parameters.
+const ContactCard = ({ image, alt, text }) => {
   return (
-    <div className='contentContainer'>
-        <div className='contentBox'><img src={image} alt={alt} /><p>{text}</p></div>
+    <div className='contactContainer'>
+        <div className='contactBox'><img src={image} alt={alt} /><p>{text}</p></div>
     </div>
   )
 }

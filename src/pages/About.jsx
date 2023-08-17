@@ -1,7 +1,7 @@
 import React from 'react'
 
+// The About page. Returns a paragraph contained in a white div.
 const About = () => {
-  /* The About page. Just has a simple div with a white background to display some text. */
   return (
     <div className='mainContainer'>
       <div className='aboutBg'>

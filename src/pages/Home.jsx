@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// The Home page. Displays some text and a button that links to the Products page.
 const Home = () => {
-  /* The Home page. returns some text and a Link to the Products page. */
   return (
     <div className='homeContainer'>
       <div className='homeP'>
